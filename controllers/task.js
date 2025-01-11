@@ -44,4 +44,13 @@ export const addTask = (req, res) => {
      return res.status(200).json("Tarefa atualizado com sucesso.");
    });
  };
+
+ export const deleteUser = (req, res) => {
+   const q = "DELETE FROM t_task_management WHERE `id` = ?";
  
+   db.query(q, [req.params.id], (err) => {
+     if (err) return res.json(err);
+ 
+     return res.status(200).json("Tarefa deletado com sucesso.");
+   });
+ };
