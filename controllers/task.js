@@ -27,4 +27,21 @@ export const addTask = (req, res) => {
    });
  };
 
+
+ export const updateUser = (req, res) => {
+   const q =
+     "UPDATE t_task_management SET `title` = ?, `description` = ?, `status` = ? WHERE `id` = ?";
+ 
+   const values = [
+     req.body.title,
+     req.body.description,
+     req.body.status
+   ];
+ 
+   db.query(q, [...values, req.params.id], (err) => {
+     if (err) return res.json(err);
+ 
+     return res.status(200).json("Tarefa atualizado com sucesso.");
+   });
+ };
  
