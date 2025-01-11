@@ -39,7 +39,11 @@ https://github.com/RodrigoBatis/APITaskManagement.git
 cd nome-do-repositorio
 ```
 
-### 2. Instalar Dependências
+### 2. Importar o Banco de Dados
+Certifique-se de importar o arquivo `taskmanagement.sql`, localizado na raiz do projeto, para o seu banco de dados MySQL. Este arquivo contém a estrutura necessária para o funcionamento da aplicação.
+
+
+### 3. Instalar Dependências
 Instale as dependências necessárias utilizando npm ou yarn:
 ```bash
 npm install
@@ -47,8 +51,7 @@ npm install
 yarn install
 ```
 
-
-### 3. Configure no arquivo db.js as credencias do seu banco de dados Mysql:
+### 4. Configure no arquivo db.js as credenciais do seu banco de dados MySQL:
 ```db.js
   host: 'localhost',
   user: 'SEU_USUARIO',
@@ -56,7 +59,7 @@ yarn install
   database: 'taskmanagement',
 ```
 
-### 4. Iniciar a Aplicação
+### 5. Iniciar a Aplicação
 Execute o seguinte comando para iniciar o servidor:
 ```bash
 npm start
@@ -98,6 +101,4 @@ A aplicação será iniciada na porta configurada (padrão: 8080). Você pode ac
 ### 4. Deletar uma Tarefa
 **DELETE** `/tasks/:id`
 - Substitua `:id` pelo ID da tarefa a ser excluída.
-
-
 
