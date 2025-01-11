@@ -12,10 +12,14 @@ Este projeto implementa uma API RESTful para o gerenciamento de tarefas (CRUD) u
 - **Node.js**
 - **Express**
 - **MySQL**
-
 ---
 
+## Link Front-End
+```
+https://github.com/RodrigoBatis/task_management.git
+```
 
+---
 ## Requisitos para Execução
 1. **Node.js** instalado (versão 16 ou superior).
 2. **MySQL** configurado e rodando.
