@@ -9,3 +9,22 @@ export const getTasks = (_, res) =>{
       return res.status(200).json(data);
    });
 };
+
+export const addTask = (req, res) => {
+   const query =
+     "INSERT INTO t_task_management(`title`, `description`, `status`) VALUES(?)";
+ 
+   const values = [
+     req.body.title,
+     req.body.description,
+     req.body.status,
+   ];
+ 
+   db.query(query, [values], (err) => {
+     if (err) return res.json(err);
+ 
+     return res.status(200).json("Tarefa criado com sucesso.");
+   });
+ };
+
+ 
