@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/", taskRoutes)
+app.use("/tasks", taskRoutes)
 
 app.listen(8080)
 

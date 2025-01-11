@@ -28,7 +28,7 @@ export const addTask = (req, res) => {
  };
 
 
- export const updateUser = (req, res) => {
+ export const updateTask = (req, res) => {
    const q =
      "UPDATE t_task_management SET `title` = ?, `description` = ?, `status` = ? WHERE `id` = ?";
  
@@ -45,10 +45,10 @@ export const addTask = (req, res) => {
    });
  };
 
- export const deleteUser = (req, res) => {
-   const q = "DELETE FROM t_task_management WHERE `id` = ?";
+ export const deleteTask = (req, res) => {
+   const query = "DELETE FROM t_task_management WHERE `id` = ?";
  
-   db.query(q, [req.params.id], (err) => {
+   db.query(query, [req.params.id], (err) => {
      if (err) return res.json(err);
  
      return res.status(200).json("Tarefa deletado com sucesso.");
